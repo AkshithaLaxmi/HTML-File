@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Quiz Master</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Registration Screen -->
+        <div id="registration" class="screen active">
+            <h1>Programming Quiz Challenge</h1>
+            <form id="regForm">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <select id="level" required>
+                    <option value="">Select Your Level</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+                <button type="submit">Start Quiz</button>
+            </form>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz" class="screen">
+            <div class="quiz-header">
+                <div class="participant-info">
+                    <span id="displayName"></span>
+                    <span id="displayLevel"></span>
+                </div>
+                <div class="quiz-stats">
+                    <div id="score">Score: <span>0</span></div>
+                    <div id="timer">Time: <span>300</span>s</div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="questionText"></h2>
+                <div id="options" class="options-grid"></div>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results" class="screen">
+            <h2>Quiz Complete!</h2>
+            <div id="finalScore"></div>
+            <div id="scoreBreakdown"></div>
+            <button onclick="restartQuiz()">Take Quiz Again</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
